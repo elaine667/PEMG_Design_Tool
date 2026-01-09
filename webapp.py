@@ -68,3 +68,19 @@ if Ac_min is not None and Aw is not None and lt not in (None, 0):
 else:
     st.latex(r"K_g = \frac{A_{c,\min} \cdot A_w}{l_t}")
     st.latex(r"K_g = \text{Not Available}")
+
+# ===========================================================
+# NEW ADDITION: Picture display
+# ===========================================================
+st.markdown("---")
+st.subheader("Picture:")
+
+image_path = core.get("Image Path", "")
+
+if image_path:
+    st.image(
+        image_path,
+        use_container_width=True
+    )
+else:
+    st.text("No picture available for this core.")
